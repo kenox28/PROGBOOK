@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: rgb(4, 255, 42);
+}
+body {
+    display: flex;
+    justify-content: center;
+    /* background-image: url(wolf.jpg); */
+
+    align-items: center;
+    height: 650px;
+    width: 100%;
+    background-color: rgb(42, 45, 48);
+    /* background-color: aliceblue; */
+}
+form {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    background-color: rgb(39, 36, 36);
+    box-shadow: rgb(51, 254, 0) 0px 20px 40px -10px;
+    border: 1px solid rgb(4, 255, 42);
+    border-radius: 10px;
+    width: 400px;
+}
+.divinput {
+    height: 50px;
+    width: 390px;
+    justify-content: center;
+    /* background-color: greenyellow; */
+
+    display: flex;
+    align-items: center;
+}
+#divcreatebtn {
+    justify-content: left;
+    display: flex;
+    align-items: center;
+}
+input {
+    height: 40px;
+    width: 375px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(42, 45, 48);
+    border: 1px solid rgb(51, 254, 0);
+    letter-spacing: 2px;
+}
+.fulln {
+    display: flex;
+
+    width: 175px;
+    border-radius: 10px;
+}
+#fnamediv {
+    display: flex;
+    justify-content: space-around;
+}
+.divX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emailT {
+    height: 30px;
+    width: 300px;
+    background-color: rgb(247, 53, 53);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.passX {
+    height: 40px;
+    width: 300px;
+    background-color: rgb(247, 53, 53);
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.emailX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(247, 53, 53);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 10px;
+}
+/* #emailX {
+    display: none;
+}
+#emailT {
+    display: none;
+}
+#passX {
+    display: none;
+} */
+.imagediv {
+    height: 70px;
+    width: 370px;
+}
+#postfeed #idimage {
+    font-size: 1rem;
+    height: 30px;
+    width: 250px;
+}
+#labelIMG {
+}
+hr {
+    width: 370px;
+    border: 1px solid rgb(4, 255, 42);
+}
+.radio {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    background-color: palegreen;
+}
+.divgender {
+    height: 40px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divradio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 370px;
+}
+#login {
+    height: 40px;
+    width: 370px;
+}
+.divMG {
+    height: 40px;
+    width: 370px;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dateb {
+    height: 40px;
+    width: 250px;
+}

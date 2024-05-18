@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Search user</title>
+        <link rel="stylesheet" href="1.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 id="logo">progbook</h1>
+            <div id="listheader1">
+                <a href="1f.html">Home</a>
+                <a href="">Message</a>
+                <a href="5.html">Active</a>
+                <a href="6.html">Search</a>
+
+                <a href="#" id="profile">
+                    <img src="profileimage/pp.jpg" alt="" id="homeprofile" />
+                </a>
+                <div id="divshow">
+                    <a href="3.php" class="a">profile</a>
+                    <a href="#" class="a">Edit profile</a>
+                    <a href="" class="a">qr code</a>
+                    <a href="" class="a">info</a>
+                    <a href="#" class="a" id="logout">logout</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="box1">
+                <form action="" class="postfeed">
+                    <label for="captadd" id="captaddlabel"
+                        >WHATS ON YOUR CODE</label
+                    >
+                    <input type="text" id="captadd" />
+                    <input type="file" name="" id="idimage" />
+                    <input type="submit" value="POST" id="captbtn" />
+                </form>
+
+                <div id="allpost">
+                    <div class="feedname">
+                        <img
+                            src="profileimage/pp.jpg"
+                            alt=""
+                            class="homeprofile" />
+                        <h1 id="Postname">Iquen Marba</h1>
+                    </div>
+                    <p id="Postcaption">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Exercitationem eum recusandae, nostrum, dolorem
+                        illo atque excepturi tenetur mollitia tempore,
+                        perspiciatis id eaque quisquam illum ratione consectetur
+                        nobis.
+                    </p>
+                    <img src="profileimage/wal2.jpg" alt="" id="postpic" />
+                </div>
+                <div id="allpost">
+                    <div class="feedname">
+                        <img
+                            src="profileimage/l.jpg"
+                            alt=""
+                            class="homeprofile" />
+                        <h1 id="Postname">Richelle Cabintoy Marba</h1>
+                    </div>
+                    <p id="Postcaption">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Exercitationem eum recusandae, nostrum, dolorem
+                        illo atque excepturi tenetur mollitia tempore,
+                        perspiciatis id eaque quisquam illum ratione consectetur
+                        nobis.
+                    </p>
+                    <img
+                        src="profileimage/361150936_1323507411927095_7308215359421128629_n (1).jpg"
+                        alt=""
+                        id="postpic" />
+                </div>
+            </div>
+            <div class="box2">
+                <form action="#" id="searchform">
+                    <input type="text" placeholder="Search..." />
+                </form>
+            </div>
+        </main>
+    </body>
+    <script>
+        // // this is to get the information to the my phpadmin data
+        // setInterval(function () {
+        //     let xhr = new XMLHttpRequest();
+
+        //     xhr.open("GET", "home2.php", true);
+        //     xhr.onload = function () {
+        //         if (xhr.readyState === XMLHttpRequest.DONE) {
+        //             if (xhr.status === 200) {
+        //                 let data = xhr.response;
+        //                 console.log(data);
+        //                 main2.innerHTML = data;
+
+        //             }
+        //         }
+        //     };
+        //     xhr.send();
+        // }, 500);
+
+        // logout function
+        const logout = document.querySelector("#logout");
+        logout.onclick = function (e) {
+            console.log("run");
+            e.preventDefault();
+            // window.location.replace("4.php");
+            window.location.href = "4.php";
+        };
+    </script>
+</html>

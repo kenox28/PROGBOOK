@@ -1,0 +1,164 @@
+<?php
+session_start();
+// if wala naka login para no error mo balik sa loginpage
+if (!isset($_SESSION['userid'])) {
+    header("location:facebok.php");
+
+}
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edit</title>
+        <link rel="stylesheet" href="1.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 id="logo">progbook</h1>
+            <div id="listheader1">
+                <a href="1f.html">Home</a>
+                <a href="">Message</a>
+                <a href="5.html">Active</a>
+                <a href="">Ranking</a>
+                <a href="6.html">Search</a>
+
+                <a href="#" id="profile">
+                    <img src="profileimage/pp.jpg" alt="" id="homeprofile" />
+                </a>
+                <div id="divshow">
+                    <a href="3.php" class="a">profile</a>
+                    <a href="#" class="a">Edit profile</a>
+                    <a href="" class="a">qr code</a>
+                    <a href="" class="a">info</a>
+                    <a href="#" class="a" id="logout">logout</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="divprofile" style="display: flex; flex-direction: column">
+                <div class="headeredit">
+                    <?php include "header.php"?>
+                    <img
+                        src="profileimage/pp.jpg"
+                        alt="profile"
+                        id="profilepagep" />
+                    <h1>
+                        <?php echo $userCname['fname'] . " " . $userCname['lname'] ?>iquen
+                        marba
+                    </h1>
+                </div>
+                <div class="divedit">
+                    <form
+                        action="#"
+                        id="EditForm"
+                        enctype="multipart/form-data">
+                        <div class="divinput" id="fnamediv">
+                            <input
+                                type="text"
+                                name="firstname"
+                                id="firstname"
+                                class="fulln"
+                                placeholder="First name" />
+                            <input
+                                type="text"
+                                name="lastname"
+                                id="lastname"
+                                class="fulln"
+                                placeholder="last name" />
+                        </div>
+                        <div class="divinput" id="Userdiv">
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="insidediv"
+                                placeholder="Enter email account" />
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                class="insidediv"
+                                placeholder="Enter password" />
+                        </div>
+                        <div class="divinput" id="numberdiv">
+                            <input
+                                type="number"
+                                name="number"
+                                id="number"
+                                class="insidediv"
+                                placeholder="Enter number" />
+
+                            <input type="date" id="dateb" name="bday" />
+                        </div>
+                        <div id="rsubmit">
+                            <input
+                                type="radio"
+                                value="MALE"
+                                id="MALE"
+                                name="gender"
+                                class="radio" />
+                            <label for="MALE">Male</label>
+
+                            <input
+                                type="radio"
+                                id="FEMALE"
+                                value="FEMALE"
+                                name="gender"
+                                class="radio" />
+                            <label for="FEMALE">Female</label>
+
+                            <div class="divMG">
+                                <label for="idimage" id="labelIMG"
+                                    >Select Profile</label
+                                >
+                                <input type="file" id="idimage" name="img" />
+                            </div>
+
+                            <button type="submit" id="saveEdit">save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        const saveEdit = document.querySelector("#saveEdit");
+        const EditForm = document.querySelector("#EditForm");
+        EditForm.onsubmit = function (e) {
+            e.preventDefault();
+        };
+        saveEdit.onclick = function (e) {
+            // console.log("hello");
+            e.preventDefault();
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "3e.php", true);
+            xhr.onload = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        let data = xhr.response;
+                        console.log(data);
+                        // if (data === "success") {
+                        //     location.href="homeActive.php";
+                        // }
+                    }
+                }
+            };
+            let formdatainputed = new FormData(EditForm);
+            xhr.send(formdatainputed);
+        };
+
+        const logout = document.querySelector("#logout");
+        logout.onclick = function (e) {
+            console.log("run");
+            e.preventDefault();
+            // window.location.replace("4.php");
+            window.location.href = "4.php";
+        };
+    </script>
+</html>
